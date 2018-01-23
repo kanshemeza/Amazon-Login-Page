@@ -1,14 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>
-     </title>
-    <body>
-        <h1>First Web Page</h1>
+    <title>Amazon Login Page</title>
+    <style>
+       
+        .centerlogo{
+            text-align: center;
+             margin: 0 auto;
+        }
         
-        <p>This is my first html page. I loooove it!!</p>
-        <a href="">More...</a>
+        .orange{
+            background-color: orange;
+        }
+        .createbtn{
+            background-color: #66ccff;
+            margin-top: -6px;
+        }
+        .inputmargin{
+            margin-bottom: 25px;
+             
+        }
+        button{
+            border: 0;
+        }
+        .fldst{
+            height: auto;
+            width: 400px;
+            margin: 0 auto;
+        }
+        
+        .newuserfldst{
+            border-top: 1px solid #b8b3b3;
+            border-right: none;
+            border-bottom: none;
+            border-left: none;
+        }
+        
+        .input{
+            height: 30px;
+            width: 100%;
+            border-radius: 4px;
+        }
+        
+        legend{
+            text-align: center;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+        
+        .forgotpswdalign{
+            float: right
+        }
+        .labels{
+            font-weight: 700;
+        }
+        
+        
+        
+    </style>
+     </head>
+    <body>
+        <div class="centerlogo">
+            <img src="Amazon%20Logo.png" alt="Amazon logo">
+            </div>
+       
+        <fieldset class="fldst">
+        <form>
+            <section>
+            
+                <h1>Sign in</h1>
+            
+                </section>
+           
+            <section class="inputmargin">
+            <div>
+                <label for="email" class="labels">Email (phone for mobile accounts)</label>     
+            </div>
+            <div>
+                <input type="text" name="email" class="input">
+            </div>
+                </section>
+            
+            <section class="inputmargin">
+            <div>
+                <label for="pswd" class="labels">Password<span class="forgotpswdalign"><a href="###">Forgot your password?</a></span></label>  
+            </div>
+            <div>
+                <input type="password" name="pswd" class="input">
+            </div>
+            </section>
+            
+            <section class="inputmargin">
+            <div>
+                <input type="submit" value="Sign in" class="orange input" >
+            </div>
+            </section>
+            
+            <section class="inputmargin">
+            <fieldset class="newuserfldst"> 
+                <legend>&nbsp;New to Amazon?&nbsp;</legend>
+            </fieldset>
+                <button class="input createbtn">Create your Amazon account</button>
+            </section>
+                
+        </form>
+            </fieldset>
+           
         </body>
    
-    </head>
+   
 </html>
