@@ -1,0 +1,126 @@
+<!DOCTPE html>
+<html>
+    <br>
+    <head>
+        <meta charset = utf-8>
+        <title>JS DOM paragraph style</title>
+        <link href="dom.css" type="text/css" rel="stylesheet">
+        
+    </head>
+    <body>
+<!-- Problem 1-->
+        <h1>Problem 1</h1>
+    <p Id ='text'>JavaScript Exercises - w3resource</p>
+        <div>
+            <button id="jsstyle" onclick="js_style()">Style
+            </button>
+        </div>
+        
+        <hr>
+        <!-- Problem 2 -->
+        <h1>Problem 2</h1>
+        <form id="form1" onsubmit="return getFormvalue()">
+            
+            First Name: <input type="text" name="fname" value="David"> <br>
+            Last Name: <input type="text" name="lname" value="Beckham"><br>
+            <input type="submit" value="Submit">
+        </form>
+        
+      <!-- Problem 3-->
+      
+        <hr>
+        <h1>Problem 3</h1>
+                <p Id ='demo'>Change background</p>
+            <button id="jsstyle" onclick="Bg()">Background</button>
+            
+        
+            <!-- Problem 4 -->
+        <hr>
+        <h1>Problem 4</h1>
+        <a href="#">Hover Here</a> 
+            <p>
+                The <b>skills</b> and experience that students achieve at <b >Coding Temple</b> take them a long way. Our curriculum is designed to make students feel confident and be successful in the <b >workforce</b> once they have completed our course.
+            </p>
+        
+      
+            
+        <script>
+         /*Problem 1*/
+        function js_style(){
+            'use strict';
+           document.getElementById('text').style.color = "orange";
+            document.getElementById('text').style.fontFamily = "cursive";
+            document.getElementById('text').style.fontSize = "22px";
+            
+        }
+            /*Problem 2*/
+            function getFormvalue(){
+                'use strict'
+                var name1 = document.forms['form1']['fname'].value;
+                var name2 = document.forms['form1']['lname'].value;
+                    alert(name1 + " " + name2);
+                    return false;
+                 
+            }
+            
+           /* Problem 3*/
+            function Bg(){
+                'use strict';
+                document.getElementById('demo').style.backgroundColor = 'purple';
+            }
+            
+            /* Problem 4 */
+            function Hovering(event){
+                'use strict';
+                 var boldTags = document.getElementsByTagName("b");
+                for(var i = 0; i <boldTags.length; i++){
+                    boldTags[i].className = "highlighted";
+                }
+            }
+            document.getElementsByTagName("a")[0].addEventListener("mouseover", Hovering);
+            
+            
+            /*Problem 6*/ 
+            document.addEventListener("keydown", keydown); 
+            var sprite = document.querySelector("sprite"); 
+            //sprite.style.top = 0; sprite.style.left = 0; 
+            
+            var facing = 3  // Adjust this to your sprite-sheet 
+            var spriteSize = 64;    //Adjust this to your sprite-sheet 
+            var walkingFrame = 0;   //Adjust this to your sprite-sheet 
+            var frameCount = 8; //Adjust this to your sprite-sheet
+            
+            function keydown(e){     console.log(e.key + " pressed");     
+                                switch(e.key){         
+                case "w":             
+        //TODO: When W is pressed, adjust the facing, walkingFrom, and sptite.style.top property.          
+        //In this case, the "facing" direction should adjust to the row in the sprite-sheet where the sprite is looking up.  //Advance the walkingFrame by 1 to animate it to the next sprite in the row.  
+                                        
+                sprite.style.top = (parseInt(sprite.style.top) - 10) + "px";             
+                break; 
+                                        
+                case "a":             
+        //sprite.style.left = ??             
+                break; 
+                                        
+                case "s":             
+        //sprite.style.top = ??             
+                break;
+                                        
+                case "d":             
+        //sprite.style.left = ??;             
+                break;     
+}     
+                     //The following functions have been supplied already to adjust your sprite-sheet, as long as the switch statement above is correct.
+                                
+                     sprite.style.backgroundPositionY = (0 - facing * spriteSize) + "px";     
+                     if(walkingFrame > frameCount){
+                         walkingFrame = 0;     
+                     }       
+                     sprite.style.backgroundPositionX = (0 - walkingFrame * spriteSize) + "px"; } 
+            
+        
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </body>
+</html>
